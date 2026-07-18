@@ -126,24 +126,6 @@ def calcular_media(dados):
 
 
 
-# TAREFA EXTRA
-# BeautifulSoup para extrair título de uma página
-
-def extrair_titulo_site():
-
-    url = "https://www.python.org"
-
-    resposta = requests.get(url)
-
-    soup = BeautifulSoup(resposta.text, "html.parser")
-
-    titulo = soup.title.text
-
-    print("\n===== TÍTULO DA PÁGINA =====")
-    print(titulo)
-
-
-
 # PROGRAMA PRINCIPAL
 
 dados = gerar_dados(10)
@@ -160,6 +142,3 @@ media = calcular_media(dados)
 
 print("\n===== ESTATÍSTICA =====")
 print(f"Média das notas: {media:.2f}")
-
-# Executa tarefa extra
-extrair_titulo_site()
